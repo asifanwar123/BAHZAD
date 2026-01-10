@@ -16,6 +16,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ onCategoryClick }
               src={CATEGORY_IMAGES.casual} 
               alt="Casual" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
             />
           </div>
           <div className="absolute top-1/2 left-[-15px] -translate-y-1/2 bg-white/90 backdrop-blur-sm px-1 py-3 shadow-sm transform -rotate-90 origin-center">
@@ -30,6 +31,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ onCategoryClick }
               src={CATEGORY_IMAGES.festive} 
               alt="Festive" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
             />
           </div>
           <div className="absolute top-1/2 left-[-15px] -translate-y-1/2 bg-white/90 backdrop-blur-sm px-1 py-3 shadow-sm transform -rotate-90 origin-center">
@@ -44,6 +46,7 @@ const CategorySpotlight: React.FC<CategorySpotlightProps> = ({ onCategoryClick }
               src={CATEGORY_IMAGES.kids} 
               alt="Kids" 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
             />
           </div>
           <div className="absolute top-1/2 left-[-8px] -translate-y-1/2 bg-white/90 backdrop-blur-sm px-1 py-3 shadow-sm transform -rotate-90 origin-center">

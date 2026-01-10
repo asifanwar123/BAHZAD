@@ -28,7 +28,8 @@ export const PRODUCTS: Product[] = [
     description: 'Exquisite black festive wear with intricate detailing.',
     tags: ['women', 'festive', 'black'],
     sizes: SIZES,
-    discountPercentage: 16
+    discountPercentage: 16,
+    isNew: true
   },
   {
     id: '2',
@@ -67,7 +68,8 @@ export const PRODUCTS: Product[] = [
     description: 'Vibrant and traditional, perfect for celebrations.',
     tags: ['women', 'festive', 'pink'],
     sizes: SIZES,
-    discountPercentage: 17
+    discountPercentage: 17,
+    isNew: true
   },
   {
     id: '5',
@@ -158,7 +160,8 @@ export const PRODUCTS: Product[] = [
     description: 'Bright crimson kurta for the little ones.',
     tags: ['kids', 'festive', 'red'],
     sizes: ['20', '22', '24', '26', '28'],
-    discountPercentage: 25
+    discountPercentage: 25,
+    isNew: true
   },
   {
     id: '12',

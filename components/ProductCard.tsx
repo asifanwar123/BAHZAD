@@ -30,12 +30,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
           loading="lazy"
         />
         
-        {/* Discount Badge */}
-        {product.discountPercentage && (
-          <div className="absolute top-2 left-2 bg-sale text-white text-[10px] font-bold px-2 py-1">
-            -{product.discountPercentage}%
-          </div>
-        )}
+        {/* Badges Container */}
+        <div className="absolute top-2 left-2 flex flex-col gap-1 z-10">
+          {product.isNew && (
+            <span className="bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider">
+              New
+            </span>
+          )}
+          {product.discountPercentage && (
+            <span className="bg-sale text-white text-[10px] font-bold px-2 py-1">
+              -{product.discountPercentage}%
+            </span>
+          )}
+        </div>
 
         {/* Favorite Button */}
         <button

@@ -23,6 +23,7 @@ const Hero: React.FC = () => {
               src={img} 
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover object-top md:object-center"
+              loading={index === 0 ? "eager" : "lazy"}
             />
           </div>
         ))}

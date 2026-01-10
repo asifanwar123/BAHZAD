@@ -10,6 +10,7 @@ export interface Product {
   tags: string[];
   sizes?: string[];
   discountPercentage?: number;
+  isNew?: boolean;
 }
 
 export interface CartItem extends Product {
