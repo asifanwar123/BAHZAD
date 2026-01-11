@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Banknote } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 interface FooterProps {
   onCategoryClick: (category: string) => void;
@@ -85,9 +85,8 @@ const Footer: React.FC<FooterProps> = ({ onCategoryClick, onHomeClick, onPageCli
                  <p className="text-[12px] font-semibold text-primary mb-3">We Accept:</p>
                  <div className="flex flex-wrap gap-3 items-center">
                     {/* Cash on Delivery */}
-                    <div className="h-8 px-2 bg-white border border-gray-200 rounded flex items-center justify-center gap-1 shadow-sm" title="Cash on Delivery">
-                        <Banknote className="w-4 h-4 text-gray-600" />
-                        <span className="text-[9px] font-bold text-gray-700">COD</span>
+                    <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="Cash on Delivery">
+                        <img src="https://png.pngtree.com/png-clipart/20250602/original/pngtree-cod-icon-vector-png-image_21114741.png" alt="COD" className="w-full h-full object-contain" />
                     </div>
 
                     {/* JazzCash */}
@@ -97,17 +96,17 @@ const Footer: React.FC<FooterProps> = ({ onCategoryClick, onHomeClick, onPageCli
 
                     {/* EasyPaisa */}
                     <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="EasyPaisa">
-                        <img src="https://seeklogo.com/images/E/easypaisa-logo-476C55648C-seeklogo.com.png" alt="EasyPaisa" className="w-full h-full object-contain" />
+                        <img src="https://freesvg.org/img/1612850349easypaisa.png" alt="EasyPaisa" className="w-full h-full object-contain" />
                     </div>
 
                     {/* SadaPay */}
                     <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="SadaPay">
-                        <img src="https://seeklogo.com/images/S/sadapay-logo-50B01D219C-seeklogo.com.png" alt="SadaPay" className="w-full h-full object-contain" />
+                        <img src="https://crystalpng.com/wp-content/uploads/2025/09/Sadapay-Logo.png" alt="SadaPay" className="w-full h-full object-contain" />
                     </div>
 
                      {/* Meezan Bank */}
                      <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="Meezan Bank">
-                        <img src="https://seeklogo.com/images/M/meezan-bank-logo-0A86533036-seeklogo.com.png" alt="Meezan Bank" className="w-full h-full object-contain" />
+                        <img src="https://shedfoundation.org.pk/wp-content/uploads/2024/06/Untitled-1-550x632.png" alt="Meezan Bank" className="w-full h-full object-contain" />
                     </div>
                     
                     {/* Mastercard */}

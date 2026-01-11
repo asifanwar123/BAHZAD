@@ -256,22 +256,24 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose, total, o
                     {/* Payment Method Selector */}
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
                        <button type="button" onClick={() => setPaymentMethod('COD')} className={`p-2 border rounded-md flex flex-col items-center justify-center text-xs font-medium h-20 transition-all ${paymentMethod === 'COD' ? 'border-amber-500 bg-amber-50 text-amber-700 ring-1 ring-amber-500' : 'border-gray-200 hover:bg-gray-50 text-gray-600'}`}>
-                          <Banknote className="h-6 w-6 mb-1" /> Cash on Delivery
+                          <img src="https://png.pngtree.com/png-clipart/20250602/original/pngtree-cod-icon-vector-png-image_21114741.png" alt="COD" className="h-8 w-auto mb-1 object-contain" />
+                          <span className="text-[10px] font-bold">Cash on Delivery</span>
                        </button>
                        <button type="button" onClick={() => setPaymentMethod('JAZZCASH')} className={`p-2 border rounded-md flex flex-col items-center justify-center text-xs font-medium h-20 transition-all ${paymentMethod === 'JAZZCASH' ? 'border-red-500 bg-red-50 text-red-700 ring-1 ring-red-500' : 'border-gray-200 hover:bg-gray-50 text-gray-600'}`}>
-                          <span className="text-lg font-bold font-sans">Jazz</span>Cash
+                          <img src="https://seeklogo.com/images/J/jazz-cash-logo-829841352F-seeklogo.com.png" alt="JazzCash" className="h-8 w-auto mb-1 object-contain" />
                        </button>
                        <button type="button" onClick={() => setPaymentMethod('EASYPAISA')} className={`p-2 border rounded-md flex flex-col items-center justify-center text-xs font-medium h-20 transition-all ${paymentMethod === 'EASYPAISA' ? 'border-green-500 bg-green-50 text-green-700 ring-1 ring-green-500' : 'border-gray-200 hover:bg-gray-50 text-gray-600'}`}>
-                          <span className="text-lg font-bold font-sans italic">easy</span>paisa
+                          <img src="https://freesvg.org/img/1612850349easypaisa.png" alt="EasyPaisa" className="h-8 w-auto mb-1 object-contain" />
                        </button>
                        <button type="button" onClick={() => setPaymentMethod('SADAPAY')} className={`p-2 border rounded-md flex flex-col items-center justify-center text-xs font-medium h-20 transition-all ${paymentMethod === 'SADAPAY' ? 'border-teal-500 bg-teal-50 text-teal-700 ring-1 ring-teal-500' : 'border-gray-200 hover:bg-gray-50 text-gray-600'}`}>
-                          <span className="text-sm font-bold font-sans">Sada</span>Pay
+                          <img src="https://crystalpng.com/wp-content/uploads/2025/09/Sadapay-Logo.png" alt="SadaPay" className="h-6 w-auto mb-1 object-contain" />
                        </button>
                        <button type="button" onClick={() => setPaymentMethod('MEEZAN')} className={`p-2 border rounded-md flex flex-col items-center justify-center text-xs font-medium h-20 transition-all ${paymentMethod === 'MEEZAN' ? 'border-purple-500 bg-purple-50 text-purple-700 ring-1 ring-purple-500' : 'border-gray-200 hover:bg-gray-50 text-gray-600'}`}>
-                          <Building2 className="h-5 w-5 mb-1" /> Meezan Bank
+                          <img src="https://shedfoundation.org.pk/wp-content/uploads/2024/06/Untitled-1-550x632.png" alt="Meezan" className="h-8 w-auto mb-1 object-contain" />
                        </button>
                        <button type="button" onClick={() => setPaymentMethod('CARD')} className={`p-2 border rounded-md flex flex-col items-center justify-center text-xs font-medium h-20 transition-all ${paymentMethod === 'CARD' ? 'border-blue-500 bg-blue-50 text-blue-700 ring-1 ring-blue-500' : 'border-gray-200 hover:bg-gray-50 text-gray-600'}`}>
-                          <CreditCard className="h-6 w-6 mb-1" /> Card
+                          <CreditCard className="h-6 w-6 mb-1" /> 
+                          <span className="mt-1">Card</span>
                        </button>
                     </div>
 
