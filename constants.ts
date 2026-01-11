@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
     price: 21000,
     originalPrice: 25000,
     currency: CURRENCY,
-    image: 'https://images.unsplash.com/photo-1631233859262-0d62f72f232d?q=80&w=800&auto=format&fit=crop', // Representative black outfit
+    image: 'https://khayat.pk/cdn/shop/files/THT05080.jpg',
     description: 'Exquisite black festive wear with intricate detailing.',
     tags: ['women', 'festive', 'black'],
     sizes: SIZES,
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
     price: 19000,
     originalPrice: 22000,
     currency: CURRENCY,
-    image: 'https://images.unsplash.com/photo-1594552072238-b8a33785b261?q=80&w=800&auto=format&fit=crop', // Representative
+    image: 'https://khayat.pk/cdn/shop/files/THT05003.jpg',
     description: 'Elegant black ensemble for special occasions.',
     tags: ['women', 'festive', 'black'],
     sizes: SIZES,
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
     price: 17000,
     originalPrice: 20000,
     currency: CURRENCY,
-    image: 'https://images.unsplash.com/photo-1585419999297-c208c02c6109?q=80&w=800&auto=format&fit=crop', // Representative Red
+    image: 'https://khayat.pk/cdn/shop/files/DSC06237_6749f6bb-9799-4a59-8007-336d4345d705.jpg',
     description: 'Stunning red outfit crafted for the festive season.',
     tags: ['women', 'festive', 'red'],
     sizes: SIZES,
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
     price: 17500,
     originalPrice: 21000,
     currency: CURRENCY,
-    image: '//khayat.pk/cdn/shop/files/DSC04961.jpg?v=1761064162', // Actual image from HTML data
+    image: 'https://khayat.pk/cdn/shop/files/DSC06229_d993c335-3608-40d3-b99b-ba301f4dee77.jpg',
     description: 'Vibrant and traditional, perfect for celebrations.',
     tags: ['women', 'festive', 'pink'],
     sizes: SIZES,
@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
     price: 3950,
     originalPrice: 5600,
     currency: CURRENCY,
-    image: 'https://images.unsplash.com/photo-1583391733958-e026884638a9?q=80&w=800&auto=format&fit=crop',
+    image: 'https://khayat.pk/cdn/shop/files/DSC04988.jpg',
     description: 'Soft tea pink casual wear for everyday elegance.',
     tags: ['women', 'casual', 'pink'],
     sizes: SIZES,
@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     price: 3950,
     originalPrice: 5600,
     currency: CURRENCY,
-    image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=800&auto=format&fit=crop', // Purple
+    image: 'https://khayat.pk/cdn/shop/files/22.png',
     description: 'Deep purple hue with comfortable fabric.',
     tags: ['women', 'casual', 'purple'],
     sizes: SIZES,
