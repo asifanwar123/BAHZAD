@@ -191,7 +191,21 @@ export const STATIC_PAGES_CONTENT: Record<string, { title: string, content: stri
       <p class="mb-4">Bahzad was born from a desire to bridge the gap between traditional Eastern heritage and contemporary fashion sensibilities. Established in 2020, we started as a small boutique with a big vision: to create premium ethnic wear that resonates with the modern individual.</p>
       <p class="mb-4">Our journey began in the heart of the textile district, where we rediscovered the beauty of artisanal craftsmanship. We believe that clothing is not just about covering the body, but about expressing identity and culture. Each piece in our collection is a testament to this belief, crafted with the finest fabrics and intricate detailing.</p>
       <p class="mb-4">Today, Bahzad is more than just a brand; it's a celebration of elegance, comfort, and timeless style. We are committed to sustainable practices and ethical sourcing, ensuring that our growth contributes positively to the community and the environment.</p>
-      <p>Thank you for being part of our story.</p>
+      <p class="mb-8">Thank you for being part of our story.</p>
+
+      <div class="mt-12 border-t border-gray-200 pt-8">
+        <h3 class="font-heading font-bold text-2xl text-primary text-center mb-8 uppercase tracking-widest">CEO Message</h3>
+        <div class="flex flex-col md:flex-row items-center gap-8 justify-center">
+          <div class="w-48 h-48 flex-shrink-0 overflow-hidden rounded-full border-4 border-gray-100 shadow-lg">
+            <img src="https://scontent.flhe6-1.fna.fbcdn.net/v/t39.30808-6/480096217_122098691768772817_5002006631407603851_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0wKAytSaz3gQ7kNvwE1JmvU&_nc_oc=AdnQ5c3JqW2hAc0u3fIBOZwH0JhPMHrzQlFQOP3MeAYgFmZCXd6YZooHyVn84op_AqU&_nc_zt=23&_nc_ht=scontent.flhe6-1.fna&_nc_gid=7zR6OvYUirWJxE7n7iwkoQ&oh=00_Afpt8ZrstJJ_jCFR8hYw3RfxLj_uVllwsqFRq61m5osL-Q&oe=69692035" alt="Muhammad Bahzad Faisal" class="w-full h-full object-cover">
+          </div>
+          <div class="text-center md:text-left max-w-lg">
+             <blockquote class="italic text-gray-600 text-lg mb-4">"We don't just sell clothes; we craft experiences that honor our traditions while embracing the future. Every stitch tells a story of passion and dedication."</blockquote>
+             <p class="font-bold text-primary text-xl">Muhammad Bahzad Faisal</p>
+             <p class="text-secondary text-sm uppercase tracking-wider">Founder & CEO</p>
+          </div>
+        </div>
+      </div>
     `
   },
   'Exchange & Return Policy': {
@@ -294,13 +308,13 @@ export const STATIC_PAGES_CONTENT: Record<string, { title: string, content: stri
         <div class="bg-gray-50 p-6 rounded-lg">
           <h3 class="font-bold text-lg mb-2">Customer Care</h3>
           <p class="mb-1"><strong>Email:</strong> support@bahzad.pk</p>
-          <p class="mb-1"><strong>Phone/WhatsApp:</strong> +92 300 1234567</p>
+          <p class="mb-1"><strong>Phone/WhatsApp:</strong> +923056622557</p>
           <p><strong>Hours:</strong> Mon-Sat, 10:00 AM - 6:00 PM (PKT)</p>
         </div>
         
         <div class="bg-gray-50 p-6 rounded-lg">
           <h3 class="font-bold text-lg mb-2">Head Office</h3>
-          <p>123 Fashion Avenue,<br>Textile City, Karachi,<br>Pakistan</p>
+          <p>Shop No. 123, V Chowk,<br>Vehari Road Multan</p>
         </div>
       </div>
     `
