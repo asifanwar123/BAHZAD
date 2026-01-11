@@ -163,6 +163,7 @@ const App: React.FC = () => {
         onLoginClick={() => setIsLoginOpen(true)}
         user={user}
         onLogout={() => setUser(null)}
+        onPageClick={navigateStaticPage}
       />
 
       {view === 'HOME' && (

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Banknote } from 'lucide-react';
 
 interface FooterProps {
   onCategoryClick: (category: string) => void;
@@ -82,27 +82,39 @@ const Footer: React.FC<FooterProps> = ({ onCategoryClick, onHomeClick, onPageCli
                  </div>
               </div>
               <div className="mt-6">
-                 <p className="text-[12px] font-semibold text-primary mb-2">We Accept:</p>
-                 <div className="flex flex-wrap gap-2">
-                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="Cash on Delivery">
-                        <span className="text-[8px] font-bold text-gray-800">COD</span>
+                 <p className="text-[12px] font-semibold text-primary mb-3">We Accept:</p>
+                 <div className="flex flex-wrap gap-3 items-center">
+                    {/* Cash on Delivery */}
+                    <div className="h-8 px-2 bg-white border border-gray-200 rounded flex items-center justify-center gap-1 shadow-sm" title="Cash on Delivery">
+                        <Banknote className="w-4 h-4 text-gray-600" />
+                        <span className="text-[9px] font-bold text-gray-700">COD</span>
                     </div>
-                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="JazzCash">
-                        <span className="text-[8px] font-bold text-red-600">JazzCash</span>
+
+                    {/* JazzCash */}
+                    <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="JazzCash">
+                        <img src="https://seeklogo.com/images/J/jazz-cash-logo-829841352F-seeklogo.com.png" alt="JazzCash" className="w-full h-full object-contain" />
                     </div>
-                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="EasyPaisa">
-                        <span className="text-[8px] font-bold text-green-600 italic">easy</span>
+
+                    {/* EasyPaisa */}
+                    <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="EasyPaisa">
+                        <img src="https://seeklogo.com/images/E/easypaisa-logo-476C55648C-seeklogo.com.png" alt="EasyPaisa" className="w-full h-full object-contain" />
                     </div>
-                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="SadaPay">
-                        <span className="text-[8px] font-bold text-teal-600">Sada</span>
+
+                    {/* SadaPay */}
+                    <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="SadaPay">
+                        <img src="https://seeklogo.com/images/S/sadapay-logo-50B01D219C-seeklogo.com.png" alt="SadaPay" className="w-full h-full object-contain" />
                     </div>
-                     <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="Meezan Bank">
-                        <span className="text-[8px] font-bold text-purple-700">Meezan</span>
+
+                     {/* Meezan Bank */}
+                     <div className="h-8 w-12 bg-white border border-gray-200 rounded flex items-center justify-center p-1 shadow-sm overflow-hidden" title="Meezan Bank">
+                        <img src="https://seeklogo.com/images/M/meezan-bank-logo-0A86533036-seeklogo.com.png" alt="Meezan Bank" className="w-full h-full object-contain" />
                     </div>
-                    <div className="h-6 w-10 bg-white border border-gray-200 flex items-center justify-center">
-                        <div className="flex -space-x-1">
-                            <div className="w-3 h-3 rounded-full bg-red-500 opacity-80"></div>
-                            <div className="w-3 h-3 rounded-full bg-yellow-500 opacity-80"></div>
+                    
+                    {/* Mastercard */}
+                    <div className="h-8 w-10 bg-white border border-gray-200 rounded flex items-center justify-center shadow-sm">
+                        <div className="flex -space-x-1.5">
+                            <div className="w-4 h-4 rounded-full bg-[#EB001B] opacity-90"></div>
+                            <div className="w-4 h-4 rounded-full bg-[#F79E1B] opacity-90"></div>
                         </div>
                     </div>
                  </div>
