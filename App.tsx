@@ -12,6 +12,7 @@ import CheckoutModal from './components/CheckoutModal';
 import LoginModal from './components/LoginModal';
 import Footer from './components/Footer';
 import AiStylist from './components/AiStylist';
+import PromotionalModal from './components/PromotionalModal';
 import { PRODUCTS, STATIC_PAGES_CONTENT } from './constants';
 import { Product, CartItem, ViewType, User } from './types';
 
@@ -313,6 +314,8 @@ const App: React.FC = () => {
         onLoginSuccess={(u) => setIsLoginOpen(false) || setUser(u)} 
       />
 
+      <PromotionalModal />
+      
       <AiStylist />
     </div>
   );
