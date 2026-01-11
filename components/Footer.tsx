@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 
@@ -82,9 +83,21 @@ const Footer: React.FC<FooterProps> = ({ onCategoryClick, onHomeClick, onPageCli
               </div>
               <div className="mt-6">
                  <p className="text-[12px] font-semibold text-primary mb-2">We Accept:</p>
-                 <div className="flex space-x-2">
-                    <div className="h-6 w-10 bg-white border border-gray-200 flex items-center justify-center">
-                        <span className="text-[8px] font-bold text-blue-600 italic">VISA</span>
+                 <div className="flex flex-wrap gap-2">
+                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="Cash on Delivery">
+                        <span className="text-[8px] font-bold text-gray-800">COD</span>
+                    </div>
+                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="JazzCash">
+                        <span className="text-[8px] font-bold text-red-600">JazzCash</span>
+                    </div>
+                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="EasyPaisa">
+                        <span className="text-[8px] font-bold text-green-600 italic">easy</span>
+                    </div>
+                    <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="SadaPay">
+                        <span className="text-[8px] font-bold text-teal-600">Sada</span>
+                    </div>
+                     <div className="h-6 px-1.5 bg-white border border-gray-200 flex items-center justify-center" title="Meezan Bank">
+                        <span className="text-[8px] font-bold text-purple-700">Meezan</span>
                     </div>
                     <div className="h-6 w-10 bg-white border border-gray-200 flex items-center justify-center">
                         <div className="flex -space-x-1">

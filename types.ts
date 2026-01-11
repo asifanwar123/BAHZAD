@@ -1,3 +1,4 @@
+
 export interface Product {
   id: string;
   name: string;
@@ -22,6 +23,14 @@ export interface ChatMessage {
   role: 'user' | 'model';
   text: string;
 }
+
+export interface User {
+  phoneNumber: string;
+  name?: string;
+  isLoggedIn: boolean;
+}
+
+export type PaymentMethod = 'CARD' | 'JAZZCASH' | 'EASYPAISA' | 'SADAPAY' | 'MEEZAN' | 'COD';
 
 export type ViewType = 'HOME' | 'DETAILS' | 'FAVORITES' | 'COLLECTION' | 'STATIC_PAGE';
 

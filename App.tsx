@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -8,16 +9,21 @@ import CollectionPage from './components/CollectionPage';
 import StaticPage from './components/StaticPage';
 import CartSidebar from './components/CartSidebar';
 import CheckoutModal from './components/CheckoutModal';
+import LoginModal from './components/LoginModal';
 import Footer from './components/Footer';
 import AiStylist from './components/AiStylist';
 import { PRODUCTS, STATIC_PAGES_CONTENT } from './constants';
-import { Product, CartItem, ViewType } from './types';
+import { Product, CartItem, ViewType, User } from './types';
 
 const App: React.FC = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   
+  // Authentication State
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+
   // Navigation States
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
@@ -154,6 +160,9 @@ const App: React.FC = () => {
         onHomeClick={navigateHome}
         onFavoritesClick={navigateFavorites}
         onCategoryClick={navigateCollection}
+        onLoginClick={() => setIsLoginOpen(true)}
+        user={user}
+        onLogout={() => setUser(null)}
       />
 
       {view === 'HOME' && (
@@ -293,6 +302,13 @@ const App: React.FC = () => {
         onClose={() => setIsCheckoutOpen(false)} 
         total={cartTotal}
         onSuccess={handleCheckoutSuccess}
+        user={user}
+      />
+
+      <LoginModal 
+        isOpen={isLoginOpen} 
+        onClose={() => setIsLoginOpen(false)} 
+        onLoginSuccess={(u) => setIsLoginOpen(false) || setUser(u)} 
       />
 
       <AiStylist />

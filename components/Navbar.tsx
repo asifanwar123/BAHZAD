@@ -1,5 +1,7 @@
+
 import React, { useState } from 'react';
-import { ShoppingBag, Menu, X, Search, Heart, User } from 'lucide-react';
+import { ShoppingBag, Menu, X, Search, Heart, User, LogOut } from 'lucide-react';
+import { User as UserType } from '../types';
 
 interface NavbarProps {
   cartCount: number;
@@ -8,6 +10,9 @@ interface NavbarProps {
   onHomeClick: () => void;
   onFavoritesClick: () => void;
   onCategoryClick: (category: string) => void;
+  onLoginClick: () => void;
+  user: UserType | null;
+  onLogout: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ 
@@ -16,9 +21,13 @@ const Navbar: React.FC<NavbarProps> = ({
   onCartClick, 
   onHomeClick, 
   onFavoritesClick,
-  onCategoryClick 
+  onCategoryClick,
+  onLoginClick,
+  user,
+  onLogout
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false);
 
   const handleNavClick = (category: string) => {
     onCategoryClick(category);
@@ -47,9 +56,34 @@ const Navbar: React.FC<NavbarProps> = ({
 
           {/* Icons (Right) */}
           <div className="flex items-center space-x-6 md:w-[150px] justify-end">
-            <button className="hidden md:block text-primary hover:text-secondary transition-colors">
-              <User className="h-5 w-5" strokeWidth={1.5} />
-            </button>
+            <div className="relative hidden md:block">
+              <button 
+                className={`text-primary hover:text-secondary transition-colors flex items-center ${user ? 'text-amber-600' : ''}`}
+                onClick={user ? () => setShowUserMenu(!showUserMenu) : onLoginClick}
+              >
+                <User className="h-5 w-5" strokeWidth={1.5} />
+                {user && <span className="ml-2 text-xs font-bold uppercase hidden xl:block">{user.name?.split(' ')[0]}</span>}
+              </button>
+              
+              {/* User Dropdown */}
+              {user && showUserMenu && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100 animate-fade-in-down">
+                  <div className="px-4 py-2 text-xs text-gray-500 border-b border-gray-100">
+                    Signed in as <br/> <span className="font-bold text-gray-900">{user.phoneNumber}</span>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      onLogout();
+                      setShowUserMenu(false);
+                    }}
+                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center"
+                  >
+                    <LogOut className="h-4 w-4 mr-2" /> Sign out
+                  </button>
+                </div>
+              )}
+            </div>
+
             <button className="text-primary hover:text-secondary transition-colors">
               <Search className="h-5 w-5" strokeWidth={1.5} />
             </button>
@@ -87,8 +121,27 @@ const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 animate-fade-in-down z-40 shadow-lg h-screen">
+        <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 animate-fade-in-down z-40 shadow-lg h-screen overflow-y-auto">
           <div className="px-4 pt-2 pb-6 space-y-1 flex flex-col">
+            <div className="py-4 border-b border-gray-50 mb-2">
+              {user ? (
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-bold text-gray-900">Hi, {user.name}</span>
+                  <button onClick={onLogout} className="text-xs text-red-500 font-medium">Logout</button>
+                </div>
+              ) : (
+                <button 
+                  onClick={() => {
+                    onLoginClick();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full bg-primary text-white py-3 text-sm font-bold uppercase rounded"
+                >
+                  Login / Sign Up
+                </button>
+              )}
+            </div>
+
             <button onClick={() => handleNavClick('Home')} className="text-left px-3 py-4 text-sm font-bold uppercase tracking-widest text-primary border-b border-gray-50">Home</button>
             <button onClick={() => handleNavClick('New Arrivals')} className="text-left px-3 py-4 text-sm font-bold uppercase tracking-widest text-primary hover:bg-gray-50 border-b border-gray-50">New Arrivals</button>
             <button onClick={() => handleNavClick('Casual')} className="text-left px-3 py-4 text-sm font-bold uppercase tracking-widest text-primary hover:bg-gray-50 border-b border-gray-50">Casual</button>
