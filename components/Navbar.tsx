@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Menu, X, Search, Heart, User, LogOut, Zap, Truck } from 'lucide-react';
 import { User as UserType } from '../types';
 
@@ -16,6 +16,13 @@ interface NavbarProps {
   onPageClick: (pageName: string) => void;
 }
 
+const FLASH_MESSAGES = [
+  "Flash Discount: Flat 30% Off",
+  "New Arrivals are Live",
+  "End of Season Sale",
+  "Limited Time Offer"
+];
+
 const Navbar: React.FC<NavbarProps> = ({ 
   cartCount, 
   favoritesCount, 
@@ -30,6 +37,14 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [currentFlashIndex, setCurrentFlashIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFlashIndex((prev) => (prev + 1) % FLASH_MESSAGES.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleNavClick = (category: string) => {
     onCategoryClick(category);
@@ -57,10 +72,10 @@ const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center space-x-4 sm:space-x-8">
             <button 
               onClick={() => onCategoryClick('Sale')} 
-              className="flex items-center hover:text-amber-400 transition-colors uppercase font-bold tracking-widest animate-pulse"
+              className="flex items-center hover:text-amber-400 transition-colors uppercase font-bold tracking-widest animate-pulse min-w-[180px] justify-center"
             >
               <Zap className="w-3 h-3 mr-1 fill-amber-400 text-amber-400" />
-              Flash Discount
+              {FLASH_MESSAGES[currentFlashIndex]}
             </button>
             
             <span className="hidden sm:inline text-gray-500">|</span>
